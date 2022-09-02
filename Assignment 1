@@ -1,0 +1,171 @@
+#Question 1
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort() # Sorting the ages List
+print ("Sorted list of ages = ",ages)
+min_age = min(ages) # Finding the minimum element in the List
+max_age = max(ages) # Finding the maximum element in the List
+print ("Minimum age =",min_age)
+print ("Maximum age = ", max_age)
+ages.append (min_age) #Appending the minimum age to the list
+ages.append(max_age)  #Appending the maximum age to the list
+print("After adding min and max ages to the list = ", ages)
+ages.sort() #Sorting the ages list as we added min and max ages to the list again
+length = len(ages) #finding the length of the ages list
+if length82 == 0: # checking the length of the list is even or odd
+  median_age = (ages[int(length/2)] + ages[int(length/2)+1])/2 #finding the median age if length of the list is even
+else:
+  median_age = ages[1nt(len(ages)+1)/2.01 #finding the median age if length of the list 1s odd
+print ("Median age = ",median_age)
+average_age = sum(ages)/length #Finding the average age of the list of ages
+print ("Average age =",average_age)
+ages_range = max_age - min_age
+#Finding the range of the ages
+print ( “ Range of the ages = "ages_range)
+
+
+#Question 2
+dog = {} # Creating an empty dictionary
+print ("dog = ", dog)
+dog[ "name"] = "Snoopy" #Adding name to the dog dictionary
+dog[ "color"] = "Brown" #Adding color to the dog dictionary
+dog[ "breed" ] = "Husky" #Adding breed to the dog dictionary
+dog! "legs"] = 4 #Adding legs to the dog dictionary
+dog{ "age"] = 4 #Adding age to the dog dictionary
+print ("dog = ", dog)
+student = {} # Creating Student dictionary
+student["first_name"] = "Ram" # Adding first_name to the student dictionary
+student["last_name"] = "Kaka" # Adding last _name to the student dictionary
+student["gender"] = "Male" # Adding gender to the student dictionary
+student["age"] =25 # Adding age to the student dictionary
+student["marital_status"] = "single" # Adding marital_status to the student dictionary
+student["skills"] = ("Java", "Python", "C#", "R"] # Adding skills to the student dictionary
+student[ "country"] = "USA" # Adding country to the student dictionary
+student["city"] = "Kansas City" # Adding citv to the student dcinary
+student["address"] = "521 NE MO" # Adding address to the student dictionary
+print ("length of student dictionary = ", len(student)) #getting the length of student dictionary
+print ("value of skills = ",student["skills"]) # Getting the value of skills
+print ("data type of skills= ", type(student[" skills"])) # checking the data type of skills
+student["skills"].append(" Java Script") # Appending a value to the list of skills in student dictionary
+print ("value of skills = ",student["skills"])
+print ("dictionary keys as a list = ",list(student.keys())) #Getting the dictionary keys as a list
+print ("dictionary values as a list = ", list(student.values())) #Getting the dictionary values as a list
+
+#Question 3
+sisters = ("Sujji", "Padhu", "Kumari", "Roja", "Raji") #Creating a tuple with names of sisters
+brothers = ("Nari", "Shiva", "Sharry", "Loki", "Deepu") #Creating a tuple with names of brothers
+print ("Sisters =", sisters)
+print ("Brothers = ", brothers)
+siblings = sisters + brothers #joining the sisters and brothers tuples and assigning it to siblings
+print ("Siblings= ", siblings)
+Num_of_siblings = len(siblings) #Finding the number of siblings I have
+print ("Num of_siblings = ", Num of_siblings)
+siblings = ("Keshava", "Jayasree") + siblings #Modify the siblings tuple and add the name of your father and mother
+family_members = siblings #assigning siblings to family_members after adding the name of father and mother
+print("family_members = ",family members)
+
+# Question 5
+radius = int(input("Enter radius of circle ")) #allowing user to enter radius dynamically
+area of circle = 3.14*(radius**2) #Calculating the area of circle using the formula
+print("Area of the circle with radius",radius, "is :",area of circle)
+circum of circle = 2*3.14*radius #Calculating the circumferen
+of a circlr using the formula
+print ("Circumference of the circle with radius", radius"is :",circum of circle)
+
+#Question 6
+
+split_sentence : "I am a teacher and I love to inspire and teach people".split) # Usine split method we aresplitting the words(as a list) in the given sentence based on the white spaces
+unique_words_set = set(split_sentence) #Converting the list returned by split() method to a set
+print("Set of unique words in the given statement :", unique_words_set)
+Count_unique_words = len(unique_words_set) # getting the length of set
+print ("Count of unique words in the given statement : ", Count_unique_words)
+
+#Question 7
+print ("Name\t AgeltCountry\tcity\nAsabeneh\t250\tFinland\tHelsinki") #To get the prfered sequence give, we used It and In where It is used for escape sequence for tab and \n is used for a new line sequence. After Namelt, I have given some space to match the
+sequence  in the question
+
+#Question 8
+radius = 10
+area = 3.14 * radius ** 2
+print ("The area of a circle with radius (} 1s ( meters square". format(radius, int(area))) #print the radius and area using the string format() method
+
+#Question 9
+N = int (input("Enter number of students : ")) # reading user input for number of students
+Weights_in_lbs = [] # creating the empty list to read the weights in lbs
+Weights_in_kgs = [] # creating the empty list to store the calculated weights in kgs
+for student in range(N):
+  Weights_in_lbs.append(int (input("Enter weight of "+str(student+1)+": "))) #reading user input of weights in lbs and appending that to the list
+  Weights_in_kgs.append(round(Weights_1n_lbs[student]*0.45359237,2)) #Calculating the weight in kgs with the input of weights in lbs and appending it to the list
+print("Weights in lbs : ",Weights_in _lbs)
+print("Weights in kgs ",Weights _in_kgs)
+
+
+#Question 10
+import random
+class_1 = "O"
+class_2 = "X"
+ft_label = [(1,class_1),(2,class_1),(3,class_2),(6,class_2),(6,class_2),(7,class_1),(10,class_1),(11,class_1)]
+K = 3
+random.shuffle(ft_label)
+n = len(ft_label)
+train_data = ft_label[:n//2]
+test_data = ft_label[n//2:]
+
+print(train_data,test_data)
+
+
+output = []
+distance = []
+for _feature,_class in test_data:
+    distance = []
+    for _f,_c in train_data:
+        distance.append((abs(_feature-_f),_c))
+    
+    nearest_neighbors = sorted(distance)[:K]
+    
+    count_X = 0
+    count_O = 0
+    for _,_cls in nearest_neighbors:
+        if _cls == class_2:
+            count_X+=1
+        else:
+            count_O+=1
+    
+    if count_X>count_O:
+        output.append((_feature, class_2))
+    else:
+        output.append((_feature,class_1))
+
+print(output)
+#     Let O be positive and X be negative
+TP = 0
+FP = 0
+TN = 0
+FN = 0
+
+for i in range(len(output)):
+    if output[i][1]=="O":
+        if output[i][1]==test_data[i][1]:
+            TP+=1
+        else:
+            FP+=1
+    elif output[i][1]=="X":
+        if output[i][1]==test_data[i][1]:
+            TN+=1
+        else:
+            FN+=1
+
+print("TP : " , TP)
+print("FP : " , FP)
+print("TN : " , TN)
+print("FN : " , FN)
+
+cnfsn_matrix = [[TP,FN],[FP,TN]]
+print(cnfsn_matrix)
+
+accuracy = ( TP + TN ) / (TP + TN + FP + FN)
+sensitivity = TP / (TP + FN)
+specificity = TN / (TN+FP)
+
+print("Accuracy :",accuracy)
+print("Sensitivity : ",sensitivity)
+print("Specificity : ", specificity)
