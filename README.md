@@ -15,4 +15,4 @@ Train_test_split() is used to split the training and testing data and random sta
 
 Naive bayes has more accuracy than the support vector machine from the above because the features given are independent and their is no linear seperation boundary
 
-Assignment#3 Vedio  - 
+Assignment#3 Vedio  - https://drive.google.com/file/d/1Qk3IDIOuTo9MKAYjWvT_09Ip1HDqORNH/view?usp=sharing
