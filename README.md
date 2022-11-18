@@ -33,8 +33,8 @@ Assignment#5 Video - https://drive.google.com/file/d/1S2sWE5Q83J-pBGpY33-zBnUIE4
 Question - 1
 
 Hierarchical Methods: Data is grouped into a tree like structure. There are two main clustering algorithms in this method:
-*Divisive Clustering
-*Agglomerative Clustering
+* Divisive Clustering
+* Agglomerative Clustering
 
 There are 3 variants in Agglomerative method:
 
